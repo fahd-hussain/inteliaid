@@ -1,5 +1,4 @@
-
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 const ShowreelSection = () => {
   return (
@@ -18,12 +17,12 @@ const ShowreelSection = () => {
             {/* Video placeholder with cinematic overlay */}
             <div className="relative w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
-              
+
               {/* Placeholder for video */}
               <div className="relative z-10 text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-electric-blue to-neon-purple rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                   </svg>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-2">Inteliad 2025 Showreel</h3>
@@ -41,11 +40,30 @@ const ShowreelSection = () => {
         {/* Featured Projects Grid */}
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { title: "Luxury Auto Campaign", brand: "Prestige Motors", views: "12M", category: "Automotive" },
-            { title: "Fashion Week Spotlight", brand: "Avant Studio", views: "8.5M", category: "Fashion" },
-            { title: "Tech Launch Film", brand: "NextGen AI", views: "15M", category: "Technology" }
+            {
+              title: 'Luxury Auto Campaign',
+              brand: 'Prestige Motors',
+              views: '12M',
+              category: 'Automotive',
+            },
+            {
+              title: 'Fashion Week Spotlight',
+              brand: 'Avant Studio',
+              views: '8.5M',
+              category: 'Fashion',
+            },
+            {
+              title: 'Tech Launch Film',
+              brand: 'NextGen AI',
+              views: '15M',
+              category: 'Technology',
+            },
           ].map((project, index) => (
-            <div key={index} className="group cursor-pointer animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
+            <div
+              key={index}
+              className="group cursor-pointer animate-slide-up"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <div className="aspect-video bg-gradient-to-br from-dark-card to-dark-bg rounded-xl border border-gray-700 hover:border-electric-blue/50 transition-all duration-300 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -58,12 +76,16 @@ const ShowreelSection = () => {
                   <h4 className="text-white font-semibold mb-1">{project.title}</h4>
                   <p className="text-gray-400 text-sm">{project.brand}</p>
                 </div>
-                
+
                 {/* Play button overlay */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                    <svg
+                      className="w-5 h-5 text-white ml-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
                     </svg>
                   </div>
                 </div>
@@ -73,8 +95,8 @@ const ShowreelSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-dark-bg font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
           >
             View Full Portfolio

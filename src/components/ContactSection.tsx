@@ -1,7 +1,6 @@
-
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState } from 'react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +8,7 @@ const ContactSection = () => {
     brand: '',
     email: '',
     projectIdea: '',
-    budget: ''
+    budget: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -18,10 +17,12 @@ const ContactSection = () => {
     // Handle form submission logic here
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -33,8 +34,8 @@ const ContactSection = () => {
             Let's Build the <span className="text-gradient">Future of Your Brand</span> Together
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Ready to revolutionize your video content? Tell us about your vision and 
-            we'll show you what's possible with AI.
+            Ready to revolutionize your video content? Tell us about your vision and we'll show you
+            what's possible with AI.
           </p>
         </div>
 
@@ -110,7 +111,7 @@ const ContactSection = () => {
                 />
               </div>
 
-              <Button 
+              <Button
                 type="submit"
                 className="w-full bg-gradient-to-r from-electric-blue to-neon-purple hover:from-electric-blue/80 hover:to-neon-purple/80 text-white font-semibold py-4 text-lg rounded-full glow-electric transition-all duration-300 hover:scale-105"
               >
@@ -127,10 +128,10 @@ const ContactSection = () => {
                 🎓 <span className="text-gradient">AI Video Masterclass</span>
               </h3>
               <p className="text-gray-300 mb-6">
-                Want to learn AI video production yourself? Join our exclusive masterclass 
-                and discover the secrets behind creating viral AI content.
+                Want to learn AI video production yourself? Join our exclusive masterclass and
+                discover the secrets behind creating viral AI content.
               </p>
-              <Button 
+              <Button
                 variant="outline"
                 className="border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-dark-bg font-semibold px-6 py-3 rounded-full transition-all duration-300"
               >
@@ -153,13 +154,22 @@ const ContactSection = () => {
               <div>
                 <h4 className="text-white font-semibold mb-3">Follow Our Journey</h4>
                 <div className="flex space-x-4">
-                  <a href="#" className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors"
+                  >
                     <span className="text-electric-blue text-sm font-bold">in</span>
                   </a>
-                  <a href="#" className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors"
+                  >
                     <span className="text-electric-blue text-sm font-bold">ig</span>
                   </a>
-                  <a href="#" className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors"
+                  >
                     <span className="text-electric-blue text-sm font-bold">yt</span>
                   </a>
                 </div>
