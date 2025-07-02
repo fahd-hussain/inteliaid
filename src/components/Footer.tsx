@@ -1,3 +1,8 @@
+import color from '@/constant/color';
+import LinkedInIcon from './icon/linkedin';
+import InstagramIcon from './icon/instagram';
+import FacebookIcon from './icon/facebook';
+
 const Footer = () => {
   return (
     <footer className="py-12 px-4 bg-dark-bg border-t border-gray-800">
@@ -12,13 +17,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors">
-                LinkedIn
+                <LinkedInIcon width={20} height={20} fill={color.electricBlue} />
               </a>
               <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors">
-                Instagram
+                <FacebookIcon width={20} height={20} fill={color.electricBlue} />
               </a>
               <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors">
-                YouTube
+                <InstagramIcon width={20} height={20} fill={color.electricBlue} />
               </a>
             </div>
           </div>
