@@ -4,7 +4,8 @@ import { useState } from 'react';
 import InstagramIcon from './icon/instagram';
 import color from '@/constant/color';
 import FacebookIcon from './icon/facebook';
-import LinkedInIcon from './icon/linkedin';
+import TiktokIcon from './icon/Tiktok';
+import { SocialLinks } from '@/constant/links';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -159,19 +160,22 @@ const ContactSection = () => {
                 <h4 className="text-white font-semibold mb-3">Follow Our Journey</h4>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href={SocialLinks.tiktok}
+                    target="_blank"
                     className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors"
                   >
-                    <LinkedInIcon width={20} height={20} fill={color.electricBlue} />
+                    <TiktokIcon width={20} height={20} fill={color.electricBlue} />
                   </a>
                   <a
-                    href="#"
+                    href={SocialLinks.facebook}
+                    target="_blank"
                     className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors"
                   >
                     <FacebookIcon width={20} height={20} fill={color.electricBlue} />
                   </a>
                   <a
-                    href="#"
+                    href={SocialLinks.instagram}
+                    target="_blank"
                     className="w-10 h-10 bg-dark-bg/50 rounded-full flex items-center justify-center border border-gray-600 hover:border-electric-blue transition-colors"
                   >
                     <InstagramIcon width={20} height={20} fill={color.electricBlue} />

@@ -1,7 +1,8 @@
 import color from '@/constant/color';
-import LinkedInIcon from './icon/linkedin';
+import TiktokIcon from './icon/Tiktok';
 import InstagramIcon from './icon/instagram';
 import FacebookIcon from './icon/facebook';
+import { SocialLinks } from '@/constant/links';
 
 const Footer = () => {
   return (
@@ -16,13 +17,25 @@ const Footer = () => {
               artificial intelligence that captivate, inspire, and convert.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors">
-                <LinkedInIcon width={20} height={20} fill={color.electricBlue} />
+              <a
+                href={SocialLinks.tiktok}
+                target="_blank"
+                className="text-gray-400 hover:text-electric-blue transition-colors"
+              >
+                <TiktokIcon width={20} height={20} fill={color.electricBlue} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors">
+              <a
+                href={SocialLinks.facebook}
+                target="_blank"
+                className="text-gray-400 hover:text-electric-blue transition-colors"
+              >
                 <FacebookIcon width={20} height={20} fill={color.electricBlue} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-electric-blue transition-colors">
+              <a
+                href={SocialLinks.instagram}
+                target="_blank"
+                className="text-gray-400 hover:text-electric-blue transition-colors"
+              >
                 <InstagramIcon width={20} height={20} fill={color.electricBlue} />
               </a>
             </div>
