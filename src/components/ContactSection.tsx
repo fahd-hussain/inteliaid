@@ -37,6 +37,7 @@ const ContactSection = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Let's Build the <span className="text-gradient">Future of Your Brand</span> Together
+            with inteliad
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Ready to revolutionize your video content? Tell us about your vision and we'll show you
