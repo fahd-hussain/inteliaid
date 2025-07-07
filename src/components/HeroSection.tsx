@@ -37,7 +37,7 @@ const HeroSection = () => {
               size="lg"
               className="bg-gradient-to-r from-electric-blue to-neon-purple hover:from-electric-blue/80 hover:to-neon-purple/80 text-white font-semibold px-8 py-4 text-lg rounded-full glow-electric transition-all duration-300 hover:scale-105"
             >
-              Watch Showreel
+              Watch Demo reel
             </Button>
             <Button
               size="lg"

@@ -86,7 +86,7 @@ const ContactSection = () => {
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label className="block text-white font-medium mb-2">Project Budget</label>
                 <select
                   name="budget"
@@ -100,7 +100,7 @@ const ContactSection = () => {
                   <option value="50k-100k">$50k - $100k</option>
                   <option value="100k+">$100k+</option>
                 </select>
-              </div>
+              </div> */}
 
               <div>
                 <label className="block text-white font-medium mb-2">Project Idea *</label>
@@ -127,7 +127,7 @@ const ContactSection = () => {
           {/* Contact Info & Masterclass */}
           <div className="space-y-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             {/* Masterclass Section */}
-            <div className="p-8 bg-gradient-to-br from-neon-purple/10 to-electric-blue/10 rounded-2xl border border-neon-purple/30">
+            {/* <div className="p-8 bg-gradient-to-br from-neon-purple/10 to-electric-blue/10 rounded-2xl border border-neon-purple/30">
               <h3 className="text-2xl font-bold text-white mb-4">
                 🎓 <span className="text-gradient">AI Video Masterclass</span>
               </h3>
@@ -141,13 +141,13 @@ const ContactSection = () => {
               >
                 Join the Masterclass
               </Button>
-            </div>
+            </div> */}
 
             {/* Contact Details */}
             <div className="space-y-6">
               <div>
                 <h4 className="text-white font-semibold mb-2">Direct Contact</h4>
-                <p className="text-electric-blue">hello@inteliad.com</p>
+                <p className="text-electric-blue">info@inteliad.com</p>
               </div>
 
               <div>

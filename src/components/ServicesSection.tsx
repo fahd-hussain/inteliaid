@@ -14,9 +14,10 @@ const ServicesSection = () => {
     },
     {
       icon: '📝',
-      title: 'AI Storyboarding',
-      description: 'Visualize concepts instantly with AI-powered storyboard generation',
-      color: 'vivid-green',
+      title: 'AI Audio And Voiceovers'
+    ,
+      description: 'High Quality natural sounding voiceovers for videos, AI generated Background music',
+      color: 'neon-orange',
     },
     {
       icon: '🎵',
@@ -32,8 +33,8 @@ const ServicesSection = () => {
     },
     {
       icon: '⚡',
-      title: 'Rapid Prototyping',
-      description: 'Test concepts and iterate ideas at the speed of thought',
+      title: 'Visual and Graphic content',
+      description: 'Create high quality AI generated posts For Platforms like instagram,facebook,tiktok,linkein ',
       color: 'vivid-green',
     },
   ];

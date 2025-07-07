@@ -6,15 +6,15 @@ const AboutSection = () => {
           <h2 className="text-5xl md:text-6xl font-bold mb-8">
             <span className="text-gradient">Directed by AI.</span>
             <br />
-            <span className="text-white">Designed by Imagination.</span>
+            <span className="text-white">Designed by InteliAd with Imagination.</span>
           </h2>
 
           <div className="max-w-4xl mx-auto space-y-8">
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-              We are <span className="text-electric-blue font-semibold">Inteliad</span> — a
-              visionary studio fusing creativity with artificial intelligence. We craft impactful
-              video experiences that feel like high-budget productions, but are generated with
-              groundbreaking AI.
+              At <span className="text-electric-blue font-semibold">Inteliad</span>, we fuse
+              imagination with intelligent automation. <br />
+              Our AI-driven studio crafts stunning, high-end video content at a fraction of the time
+              and cost without compromising creativity or quality.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mt-16">

@@ -2,15 +2,15 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       quote: 'Working with Inteliad felt like filming 5 years in the future.',
-      author: 'Sarah Chen',
+      author: 'Ryan ikram ',
       role: 'Creative Director',
-      company: 'Nexus Brands',
+      company: 'Codignize solution',
     },
     {
       quote: 'Mind-blowing visuals, at 1/10th the cost and time.',
-      author: 'Marcus Rodriguez',
+      author: 'Mukarram Moin',
       role: 'Marketing VP',
-      company: 'TechFlow Industries',
+      company: 'ARE Builders',
     },
     {
       quote: "They didn't just meet our vision—they exceeded what we thought was possible.",
@@ -22,9 +22,9 @@ const TestimonialsSection = () => {
 
   const stats = [
     { number: '100M+', label: 'Views Generated' },
-    { number: '300+', label: 'Videos Created' },
+    { number: '150+', label: 'Videos Created' },
     { number: '50+', label: 'Global Brands' },
-    { number: '98%', label: 'Client Satisfaction' },
+    { number: '90%', label: 'Client Satisfaction' },
   ];
 
   const clientLogos = ['TechFlow', 'Nexus', 'Luna Co', 'Vibe', 'Stellar', 'Peak', 'Flux', 'Nova'];
