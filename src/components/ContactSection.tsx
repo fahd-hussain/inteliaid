@@ -149,7 +149,7 @@ const ContactSection = () => {
             <div className="space-y-6">
               <div>
                 <h4 className="text-white font-semibold mb-2">Direct Contact</h4>
-                <p className="text-electric-blue">info@inteliad.com</p>
+                <p className="text-electric-blue">info@inteliad.codignize.com</p>
               </div>
 
               <div>

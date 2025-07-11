@@ -4,26 +4,26 @@ import { Button } from '@/components/ui/button';
 
 const projectData = [
   {
-    title: 'Luxury Auto Campaign',
-    brand: 'Prestige Motors',
+    title: 'Experience the Art of Automotive Luxury',
+    brand: 'Mercedes',
     views: '12M',
     category: 'Automotive',
     video: '/videos/video-03.mp4',
     preview: '/videos/video-03.mp4',
   },
   {
-    title: 'Fashion Week Spotlight',
-    brand: 'Avant Studio',
+    title: 'Refreshing Moments, Perfectly Captured',
+    brand: 'THRISTY',
     views: '8.5M',
-    category: 'Fashion',
+    category: 'Beverages',
     video: '/videos/video-04.mp4',
     preview: '/videos/video-04.mp4',
   },
   {
-    title: 'Tech Launch Film',
-    brand: 'NextGen AI',
+    title: 'Taste the Story Behind Every Bite',
+    brand: 'Nutella',
     views: '15M',
-    category: 'Technology',
+    category: 'Food',
     video: '/videos/video-02.mp4',
     preview: '/videos/video-02.mp4',
   },
@@ -167,7 +167,7 @@ const ShowreelSection = () => {
                       <span className="text-xs bg-electric-blue/20 text-electric-blue px-2 py-1 rounded-full border border-electric-blue/30">
                         {project.category}
                       </span>
-                      <span className="text-xs text-gray-400">{project.views} views</span>
+                      {/* <span className="text-xs text-gray-400">{project.views} views</span> */}
                     </div>
                     <h4 className="font-semibold">{project.title}</h4>
                     <p className="text-sm text-gray-400">{project.brand}</p>

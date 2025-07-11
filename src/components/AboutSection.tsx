@@ -4,9 +4,9 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto text-center">
         <div className="animate-slide-up">
           <h2 className="text-5xl md:text-6xl font-bold mb-8">
-            <span className="text-gradient">Directed by AI.</span>
+            <span className="text-gradient">Designed by InteliAd</span>
             <br />
-            <span className="text-white">Designed by InteliAd with Imagination.</span>
+            <span className="text-white">with Imagination.</span>
           </h2>
 
           <div className="max-w-4xl mx-auto space-y-8">
