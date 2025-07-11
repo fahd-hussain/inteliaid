@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onScrollTo: (section: 'demoSection' | 'contactUsSection') => void;
+}
+
+const HeroSection = ({ onScrollTo }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video Overlay */}
@@ -22,11 +25,13 @@ const HeroSection = () => {
         <div className="animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
             The Future of
-            <span className="block text-gradient animate-glow rounded-3xl px-4 py-3">Commercials is AI</span>
+            <span className="block text-gradient animate-glow rounded-3xl px-4 py-3">
+              Commercials is AI
+            </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto font-light">
-            Inteliad creates cinematic video ads powered by artificial intelligence.
+            InteliAd creates cinematic video ads powered by artificial intelligence.
             <span className="block mt-2 text-electric-blue font-medium">
               Ultra-realistic. Lightning-fast. Limitlessly creative.
             </span>
@@ -36,6 +41,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-electric-blue to-neon-purple hover:from-electric-blue/80 hover:to-neon-purple/80 text-white font-semibold px-8 py-4 text-lg rounded-full glow-electric transition-all duration-300 hover:scale-105"
+              onClick={() => onScrollTo('demoSection')}
             >
               Watch Demo reel
             </Button>
@@ -43,6 +49,7 @@ const HeroSection = () => {
               size="lg"
               variant="outline"
               className="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-dark-bg font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+              onClick={() => onScrollTo('contactUsSection')}
             >
               Start a Project
             </Button>
