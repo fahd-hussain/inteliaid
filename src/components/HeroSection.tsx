@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className="animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
             The Future of
-            <span className="block text-gradient animate-glow">Commercials is AI</span>
+            <span className="block text-gradient animate-glow rounded-3xl px-4 py-3">Commercials is AI</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto font-light">

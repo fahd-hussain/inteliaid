@@ -1,195 +1,55 @@
-'use client';
-import { useRef, useState } from 'react';
-import { Button } from '@/components/ui/button';
-
-const projectData = [
-  {
-    title: 'Luxury Auto Campaign',
-    brand: 'Prestige Motors',
-    views: '12M',
-    category: 'Automotive',
-    video: '/videos/video-03.mp4',
-    preview: '/videos/video-03.mp4',
-  },
-  {
-    title: 'Fashion Week Spotlight',
-    brand: 'Avant Studio',
-    views: '8.5M',
-    category: 'Fashion',
-    video: '/videos/video-04.mp4',
-    preview: '/videos/video-04.mp4',
-  },
-  {
-    title: 'Tech Launch Film',
-    brand: 'NextGen AI',
-    views: '15M',
-    category: 'Technology',
-    video: '/videos/video-02.mp4',
-    preview: '/videos/video-02.mp4',
-  },
-];
-
-const ShowreelSection = () => {
-  const [activeVideo, setActiveVideo] = useState<'main' | number | null>(null);
-  const mainRef = useRef<HTMLVideoElement>(null);
-  const cardRefs = useRef<(HTMLVideoElement | null)[]>([]);
-
-  const handlePlay = (target: 'main' | number) => {
-    if (target !== 'main') mainRef.current?.pause();
-    else cardRefs.current.forEach((ref) => ref?.pause());
-
-    if (typeof target === 'number') {
-      cardRefs.current.forEach((ref, i) => {
-        if (ref && i !== target) ref.pause();
-      });
-    }
-
-    setActiveVideo(target);
-
-    setTimeout(() => {
-      if (target === 'main') {
-        mainRef.current?.play();
-      } else {
-        cardRefs.current[target]?.play();
-      }
-    }, 0);
-  };
-
+const AboutSection = () => {
   return (
-    <section className="py-20 px-4 bg-dark-bg">
-      <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-12 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Latest <span className="text-gradient">AI Masterpieces</span>
+    <section className="py-20 px-4 bg-gradient-to-b from-dark-bg to-dark-card">
+      <div className="max-w-6xl mx-auto text-center">
+        <div className="animate-slide-up">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">
+            <span className="text-gradient">Directed by AI.</span>
+            <br />
+            <span className="text-white">Designed by InteliAd with Imagination.</span>
           </h2>
-          <p className="text-xl text-gray-400">See how AI is reshaping storytelling</p>
-        </div>
 
-        {/* Main Showreel Video with Preview */}
-        <div className="relative mb-16 animate-fade-in">
-          <div className="aspect-video relative rounded-2xl border-2 border-electric-blue/30 overflow-hidden group hover:border-electric-blue/60 transition-all duration-500 glow-electric">
-            {/* Preview video for main */}
-            <video
-              className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${
-                activeVideo === 'main' ? 'opacity-0 pointer-events-none' : 'opacity-100'
-              }`}
-              src="/videos/video-01.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
+          <div className="max-w-4xl mx-auto space-y-8">
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+              At <span className="text-electric-blue font-semibold">Inteliad</span>, we fuse
+              imagination with intelligent automation. <br />
+              Our AI-driven studio crafts stunning, high-end video content at a fraction of the time
+              and cost without compromising creativity or quality.
+            </p>
 
-            {/* Full main video */}
-            <video
-              ref={mainRef}
-              className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${
-                activeVideo === 'main' ? 'opacity-100' : 'opacity-0 pointer-events-none'
-              }`}
-              src="/videos/video-01.mp4"
-              controls
-            />
-
-            {/* Overlay Play Button */}
-            {activeVideo !== 'main' && (
-              <div
-                onClick={() => handlePlay('main')}
-                className="absolute inset-0 bg-black/60 backdrop-blur flex flex-col items-center justify-center cursor-pointer z-10"
-              >
-                <div className="w-20 h-20 bg-gradient-to-r from-electric-blue to-neon-purple rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-2">Inteliad 2025 Showreel</h3>
-                <p className="text-gray-400">5 minutes of pure AI cinematography</p>
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <div className="p-6 bg-dark-card/50 rounded-2xl border border-electric-blue/20 hover:border-electric-blue/40 transition-all duration-300 hover:transform hover:scale-105 glow-electric">
+                <div className="w-12 h-12 bg-gradient-to-r from-electric-blue to-neon-purple rounded-lg mb-4 mx-auto"></div>
+                <h3 className="text-xl font-semibold text-electric-blue mb-3">Ultra-Realistic</h3>
+                <p className="text-gray-400">
+                  Generate cinema-quality videos that are indistinguishable from traditional
+                  production
+                </p>
               </div>
-            )}
+
+              <div className="p-6 bg-dark-card/50 rounded-2xl border border-neon-purple/20 hover:border-neon-purple/40 transition-all duration-300 hover:transform hover:scale-105 glow-purple">
+                <div className="w-12 h-12 bg-gradient-to-r from-neon-purple to-vivid-green rounded-lg mb-4 mx-auto"></div>
+                <h3 className="text-xl font-semibold text-neon-purple mb-3">Lightning Fast</h3>
+                <p className="text-gray-400">
+                  From concept to completion in days, not months. Speed meets uncompromising quality
+                </p>
+              </div>
+
+              <div className="p-6 bg-dark-card/50 rounded-2xl border border-vivid-green/20 hover:border-vivid-green/40 transition-all duration-300 hover:transform hover:scale-105 glow-green">
+                <div className="w-12 h-12 bg-gradient-to-r from-vivid-green to-electric-blue rounded-lg mb-4 mx-auto"></div>
+                <h3 className="text-xl font-semibold text-vivid-green mb-3">
+                  Limitless Creativity
+                </h3>
+                <p className="text-gray-400">
+                  No physical constraints. Create any scenario, any world, any impossible vision
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* Grid of Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {projectData.map((project, index) => {
-            const isActive = activeVideo === index;
-
-            return (
-              <div
-                key={index}
-                className="group animate-slide-up cursor-pointer"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="aspect-video relative rounded-xl border border-gray-700 overflow-hidden hover:border-electric-blue transition-all duration-300">
-                  {/* Preview Video */}
-                  <video
-                    className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${
-                      isActive ? 'opacity-0 pointer-events-none' : 'opacity-100'
-                    }`}
-                    src={project.preview}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  />
-
-                  {/* Actual Full Video */}
-                  <video
-                    ref={(el) => (cardRefs.current[index] = el)}
-                    className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${
-                      isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    }`}
-                    src={project.video}
-                    controls
-                  />
-
-                  {/* Overlay Play Button */}
-                  {!isActive && (
-                    <div
-                      onClick={() => handlePlay(index)}
-                      className="absolute inset-0 bg-black/50 backdrop-blur flex items-center justify-center z-10"
-                    >
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-6 h-6 text-white ml-0.5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                        </svg>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Bottom Labels */}
-                  <div className="absolute bottom-4 left-4 right-4 z-20 text-white">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs bg-electric-blue/20 text-electric-blue px-2 py-1 rounded-full border border-electric-blue/30">
-                        {project.category}
-                      </span>
-                      <span className="text-xs text-gray-400">{project.views} views</span>
-                    </div>
-                    <h4 className="font-semibold">{project.title}</h4>
-                    <p className="text-sm text-gray-400">{project.brand}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button
-            variant="outline"
-            className="border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-dark-bg font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
-          >
-            View Full Portfolio
-          </Button>
         </div>
       </div>
     </section>
   );
 };
 
-export default ShowreelSection;
+export default AboutSection;
